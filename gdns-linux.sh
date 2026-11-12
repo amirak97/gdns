@@ -12,11 +12,18 @@ if [[ "$COMMAND" != "set" ]]; then
     echo "  gdns set isp"
     exit 1
 fi
-
 if [[ "$MODE" == "isp" ]]; then
     nmcli connection modify "$(nmcli -t -f NAME connection show --active | head -n1)" \
         ipv4.ignore-auto-dns no \
         ipv4.dns ""
+fi
+
+if [[ "$MODE" == "xodns" ]]; then
+    nmcli connection modify "$CONNECTION" \
+        ipv4.ignore-auto-dns yes \
+        ipv4.dns "85.208.255.182 85.208.255.71"
+
+
 else
     DNS_SERVERS=("${@:2}")
 

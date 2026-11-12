@@ -5,6 +5,7 @@ A simple Bash utility to quickly manage DNS settings on Linux using NetworkManag
 ## Features
 
 - Set custom DNS servers.
+- Set XODNS Sanctions-breaker ips easily
 - Restore automatic DNS configuration provided by your ISP (DHCP).
 - Support multiple DNS servers.
 - Lightweight, dependency-minimal Bash script.
@@ -45,6 +46,11 @@ You can provide one or multiple DNS servers:
 gdns set 8.8.4.4
 gdns set 1.1.1.1 1.0.0.1
 ```
+### Set sanctions breaker
+```bash
+gdns set gdns
+```
+This instrucions sets `xodns` ips automaticly on your linux system.
 
 ### Restore ISP DNS
 
