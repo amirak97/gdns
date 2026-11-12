@@ -50,7 +50,12 @@ gdns set 1.1.1.1 1.0.0.1
 ```bash
 gdns set gdns
 ```
-This instrucions sets `xodns` ips automaticly on your linux system.
+This instrucion sets `xodns` ips automaticly on your linux system.
+or
+```bash
+gdns set shecan
+```
+This instruction sets `shecan` ips.
 
 ### Restore ISP DNS
 
@@ -67,6 +72,8 @@ This restores automatic DNS configuration through DHCP.
 | `gdns set 1.1.1.1` | Set Cloudflare DNS |
 | `gdns set 8.8.8.8 8.8.4.4` | Set Google DNS |
 | `gdns set isp` | Restore automatic ISP DNS |
+| `gdns set xodns` | Set xodns ips |
+| `gdns set shecan` | Set shecan ips |
 
 ## How It Works
 
@@ -80,6 +87,7 @@ This restores automatic DNS configuration through DHCP.
 - Currently supports IPv4 DNS servers.
 - Requires NetworkManager.
 - Modifies the active connection profile.
+- You need an active xodns or shecan account for using their services.
 
 ## License
 

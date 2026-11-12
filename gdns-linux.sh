@@ -22,6 +22,12 @@ if [[ "$MODE" == "xodns" ]]; then
     nmcli connection modify "$CONNECTION" \
         ipv4.ignore-auto-dns yes \
         ipv4.dns "85.208.255.182 85.208.255.71"
+fi
+
+if [[ "$MODE" == "shecan" ]]; then
+    nmcli connection modify "$CONNECTION" \
+        ipv4.ignore-auto-dns yes \
+        ipv4.dns "185.51.200.1 178.22.122.101"
 
 
 else
